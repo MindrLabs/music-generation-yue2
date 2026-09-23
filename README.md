@@ -13,14 +13,32 @@ It can write an ABC score before it produces any audio.
 
 ![The gradio interface taking a style and lyrics and returning a score and a song](docs/images/music-generation-yue2.gif)
 
-## Running it
+## Quick Start
 
 It needs [model-compose](https://github.com/hanyeol/model-compose) 0.4.111 or later.
 
+Install with [uv](https://docs.astral.sh/uv/):
+
+```bash
+uv pip install model-compose
+```
+
+Or with pip:
+
 ```bash
 pip install model-compose
+```
+
+Clone this repository:
+
+```bash
 git clone https://github.com/MindrLabs/music-generation-yue2
 cd music-generation-yue2
+```
+
+Run it:
+
+```bash
 model-compose up
 ```
 

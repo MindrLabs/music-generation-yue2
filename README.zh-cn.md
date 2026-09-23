@@ -13,14 +13,32 @@
 
 ![在 gradio 界面中输入风格和歌词，运行后得到乐谱和歌曲](docs/images/music-generation-yue2.gif)
 
-## 运行方法
+## 快速开始
 
 需要 [model-compose](https://github.com/hanyeol/model-compose) 0.4.111 或更高版本。
 
+用 [uv](https://docs.astral.sh/uv/) 安装：
+
+```bash
+uv pip install model-compose
+```
+
+或者用 pip 安装：
+
 ```bash
 pip install model-compose
+```
+
+克隆本仓库：
+
+```bash
 git clone https://github.com/MindrLabs/music-generation-yue2
 cd music-generation-yue2
+```
+
+运行：
+
+```bash
 model-compose up
 ```
 

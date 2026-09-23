@@ -13,14 +13,32 @@
 
 ![gradio 화면에서 스타일과 가사를 넣고 실행해 악보와 노래를 받는 모습](docs/images/music-generation-yue2.gif)
 
-## 실행 방법
+## 빠른 시작
 
 [model-compose](https://github.com/hanyeol/model-compose) 0.4.111 이상이 필요합니다.
 
+[uv](https://docs.astral.sh/uv/)로 설치:
+
+```bash
+uv pip install model-compose
+```
+
+또는 pip로 설치:
+
 ```bash
 pip install model-compose
+```
+
+이 저장소 클론:
+
+```bash
 git clone https://github.com/MindrLabs/music-generation-yue2
 cd music-generation-yue2
+```
+
+실행:
+
+```bash
 model-compose up
 ```
 
