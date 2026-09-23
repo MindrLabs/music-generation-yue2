@@ -11,7 +11,7 @@ It can write an ABC score before it produces any audio.
 
 ## Demo
 
-![The gradio interface taking a style and lyrics and returning a score and a song](media/music-generation-yue2.gif)
+![The gradio interface taking a style and lyrics and returning a score and a song](docs/images/music-generation-yue2.gif)
 
 ## Running it
 
@@ -61,7 +61,7 @@ DGX Spark, MacBook M1 each share one memory pool between processor and accelerat
 
 | Item | Value |
 | :---: | --- |
-| Dataset | 20 items from [`inputs/`](inputs) in this repository |
+| Dataset | 20 items written for this benchmark |
 | Metric | a domain tool measured the distance between machines |
 | Checkpoint | [m-a-p/YuE2-3B@14fc6c6f146441b1dd6363fcb2e01e82a6914cb7](https://huggingface.co/m-a-p/YuE2-3B/tree/14fc6c6f146441b1dd6363fcb2e01e82a6914cb7) |
 | Accuracy | machine distance |

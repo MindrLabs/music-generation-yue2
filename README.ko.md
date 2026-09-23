@@ -11,7 +11,7 @@
 
 ## 데모
 
-![gradio 화면에서 스타일과 가사를 넣고 실행해 악보와 노래를 받는 모습](media/music-generation-yue2.gif)
+![gradio 화면에서 스타일과 가사를 넣고 실행해 악보와 노래를 받는 모습](docs/images/music-generation-yue2.gif)
 
 ## 실행 방법
 
@@ -61,7 +61,7 @@ DGX Spark, MacBook M1에서는 프로세서와 가속기가 메모리 하나를 
 
 | 항목 | 값 |
 | :---: | --- |
-| 데이터셋 | 이 저장소 [`inputs/`](inputs)의 항목 20개 |
+| 데이터셋 | 이 벤치마크를 위해 쓴 항목 20개 |
 | 지표 | 도메인 도구로 기기 간 거리를 측정 |
 | 체크포인트 | [m-a-p/YuE2-3B@14fc6c6f146441b1dd6363fcb2e01e82a6914cb7](https://huggingface.co/m-a-p/YuE2-3B/tree/14fc6c6f146441b1dd6363fcb2e01e82a6914cb7) |
 | 정확도 | 기기 간 거리 |

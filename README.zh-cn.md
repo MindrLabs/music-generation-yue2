@@ -11,7 +11,7 @@
 
 ## 演示
 
-![在 gradio 界面中输入风格和歌词，运行后得到乐谱和歌曲](media/music-generation-yue2.gif)
+![在 gradio 界面中输入风格和歌词，运行后得到乐谱和歌曲](docs/images/music-generation-yue2.gif)
 
 ## 运行方法
 
@@ -61,7 +61,7 @@ DGX Spark, MacBook M1 的处理器与加速器各自共用同一内存池，因�
 
 | 项目 | 值 |
 | :---: | --- |
-| 数据集 | 本仓库 [`inputs/`](inputs) 中的 20 个条目 |
+| 数据集 | 为本基准编写的 20 个条目 |
 | 指标 | 用领域工具测量设备之间的距离 |
 | 检查点 | [m-a-p/YuE2-3B@14fc6c6f146441b1dd6363fcb2e01e82a6914cb7](https://huggingface.co/m-a-p/YuE2-3B/tree/14fc6c6f146441b1dd6363fcb2e01e82a6914cb7) |
 | 准确度 | 设备间距离 |
