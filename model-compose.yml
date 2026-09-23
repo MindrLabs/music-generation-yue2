@@ -1,0 +1,63 @@
+controller:
+  adapter:
+    type: http-server
+    port: ${env.PORT | 8080}
+    base_path: /api
+  webui:
+    driver: gradio
+    port: ${env.SERVER_PORT | 8081}
+
+workflows:
+  - id: cover
+    title: Cover from lyrics and style
+    description: Plans an ABC score from a style prompt and lyrics, then sings it as a 48 kHz stereo song
+    jobs:
+      - id: score
+        component: composer
+        action: score
+        input:
+          style: ${input.style}
+          lyrics: ${input.lyrics}
+
+      - id: cover
+        component: composer
+        action: cover
+        input:
+          style: ${input.style}
+          lyrics: ${input.lyrics}
+          abc: ${jobs.score.output.abc}
+        output:
+          audio: ${output as audio/wav}
+        depends_on: [ score ]
+
+    output:
+      score: ${jobs.score.output.abc as text}
+      audio: ${jobs.cover.output.audio as audio/wav}
+
+components:
+  - id: composer
+    type: model
+    task: music-generation
+    driver: custom
+    family: yue2
+    model: m-a-p/YuE2-3B
+    device: ${env.DEVICE | cuda}
+    max_concurrent_count: 1
+    runtime:
+      type: virtualenv
+      path: .venv/composer
+    actions:
+      - id: score
+        method: score
+        style: ${input.style as text}
+        lyrics: ${input.lyrics as text}
+        params:
+          cot_mode: melody
+
+      - id: cover
+        method: cover
+        style: ${input.style as text}
+        lyrics: ${input.lyrics as text}
+        abc: ${input.abc as text}
+        params:
+          cot_mode: melody
